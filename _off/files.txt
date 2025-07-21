@@ -1,3 +1,4 @@
+- Vale a pena fazer um manual de estudos sobre o objeto request em django.
 
 
 ######################################################
