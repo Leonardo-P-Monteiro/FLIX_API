@@ -4,37 +4,46 @@ from django.http import JsonResponse
 from django.http import HttpRequest
 from genres.models import Genre
 from django.shortcuts import get_object_or_404
+from genres.serializers import GenreSerializer
+# DRF
+from rest_framework import generics
 
 # Create your views here.
-@csrf_exempt
-def genre_create_list_view(request: HttpRequest) -> JsonResponse:
+
+class GenreCreateListView(generics.ListCreateAPIView):
+    queryset = Genre.objects.all()
+    serializer_class = GenreSerializer
+
+
+# @csrf_exempt
+# def genre_create_list_view(request: HttpRequest) -> JsonResponse:
    
-    if request.method == 'GET':
-        """
-        Consulta os gêneros existentes no banco de dados.
-        """
-        genres = Genre.objects.all()
-        genres_dict = list(genres.values())
+#     if request.method == 'GET':
+#         """
+#         Consulta os gêneros existentes no banco de dados.
+#         """
+#         genres = Genre.objects.all()
+#         genres_dict = list(genres.values())
 
-        return JsonResponse(genres_dict, safe=False, status= 200)
+#         return JsonResponse(genres_dict, safe=False, status= 200)
 
-    elif request.method == 'POST':
-        """
-        Cria gêneros no banco de dados.
-        """
-        data = json.loads(request.body.decode('utf-8'))
-        new_genre = Genre(name=data['name'])
-        new_genre.save()
+#     elif request.method == 'POST':
+#         """
+#         Cria gêneros no banco de dados.
+#         """
+#         data = json.loads(request.body.decode('utf-8'))
+#         new_genre = Genre(name=data['name'])
+#         new_genre.save()
 
-        return JsonResponse(
-            {
-                'id':new_genre.pk,
-                'name':new_genre.name
-            }, 
-            status=201,
-        )
+#         return JsonResponse(
+#             {
+#                 'id':new_genre.pk,
+#                 'name':new_genre.name
+#             }, 
+#             status=201,
+#         )
     
-    return JsonResponse({'error': 'Method not allowed'}, status=405)
+#     return JsonResponse({'error': 'Method not allowed'}, status=405)
 
 @csrf_exempt
 def genre_detail_view(request: HttpRequest, pk:int) -> JsonResponse:

@@ -1,5 +1,15 @@
-- Vale a pena fazer um manual de estudos sobre o objeto request em django.
+Faça os manuais de estudos antes da próxima aula (23/07)
 
+- Generics Views do DRF
+    - atributo queryset
+    - atributo serializer_class
+
+
+- Arquivo serializer.py na estrutura do app api django.
+- O que é um serializer?
+- DRF serializers
+    - ModelSerializer
+    - Class Meta de ModelSerializer
 
 ######################################################
         PADRÃO **SEM** EXEMPLO COMPLETO
