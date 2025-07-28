@@ -15,6 +15,10 @@ class GenreCreateListView(generics.ListCreateAPIView):
     serializer_class = GenreSerializer
 
 
+class GenreRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Genre.objects.all()
+    serializer_class = GenreSerializer
+
 # @csrf_exempt
 # def genre_create_list_view(request: HttpRequest) -> JsonResponse:
    
@@ -45,41 +49,41 @@ class GenreCreateListView(generics.ListCreateAPIView):
     
 #     return JsonResponse({'error': 'Method not allowed'}, status=405)
 
-@csrf_exempt
-def genre_detail_view(request: HttpRequest, pk:int) -> JsonResponse:
-    """
-    Acessando detalhes de um único item do banco de dados.
-    """
-    genre_obj = get_object_or_404(Genre, pk=pk)
+# @csrf_exempt
+# def genre_detail_view(request: HttpRequest, pk:int) -> JsonResponse:
+#     """
+#     Acessando detalhes de um único item do banco de dados.
+#     """
+#     genre_obj = get_object_or_404(Genre, pk=pk)
 
-    # MÉTODO GET - CONSULTA
-    if request.method == "GET":
+#     # MÉTODO GET - CONSULTA
+#     if request.method == "GET":
         
-        data = {
-            'id': genre_obj.pk,
-            'name': genre_obj.name
-        }
+#         data = {
+#             'id': genre_obj.pk,
+#             'name': genre_obj.name
+#         }
 
-        return JsonResponse(data=data, status=200)
+#         return JsonResponse(data=data, status=200)
 
-    # MÉTODO PUT - SUBSTITUIÇÃO/ALTERAÇÃO
-    elif request.method == "PUT":
+#     # MÉTODO PUT - SUBSTITUIÇÃO/ALTERAÇÃO
+#     elif request.method == "PUT":
 
-        data = json.loads(request.body.decode('utf-8'))
-        genre_obj.name = data['name']
-        genre_obj.save()
+#         data = json.loads(request.body.decode('utf-8'))
+#         genre_obj.name = data['name']
+#         genre_obj.save()
 
-        data = {
-            'id': genre_obj.pk,
-            'name': genre_obj.name
-        }
+#         data = {
+#             'id': genre_obj.pk,
+#             'name': genre_obj.name
+#         }
 
-        return JsonResponse(data, status=201)
+#         return JsonResponse(data, status=201)
     
-    # MÉTODO DELETE - EXCLUSÃO DE INFORMAÇÕES
-    elif request.method == "DELETE":
-        genre_obj.delete()
+#     # MÉTODO DELETE - EXCLUSÃO DE INFORMAÇÕES
+#     elif request.method == "DELETE":
+#         genre_obj.delete()
         
-        return JsonResponse({'message':'Delete process success'}, status=204)
+#         return JsonResponse({'message':'Delete process success'}, status=204)
     
-    return JsonResponse({'erro':'Method not allowed'}, status=405)
+#     return JsonResponse({'erro':'Method not allowed'}, status=405)

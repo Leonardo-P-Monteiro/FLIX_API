@@ -1,17 +1,9 @@
-Faça os manuais de estudos antes da próxima aula (23/07)
-
-- Generics Views do DRF
-    - atributo queryset
-    - atributo serializer_class
+Faça Manual de conhecimento. 
+- Swagger no contexto do Django Rest Framework.
 
 
-- Arquivo serializer.py na estrutura do app api django.
-- O que é um serializer?
-- DRF serializers
-    - ModelSerializer
-    - Class Meta de ModelSerializer
 
-######################################################
+########################################################################
         PADRÃO **SEM** EXEMPLO COMPLETO
 Django:
     Obs.: Gere um título condizente com o que se pede abaixo.
