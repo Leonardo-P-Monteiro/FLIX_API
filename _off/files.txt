@@ -1,5 +1,4 @@
-Faça Manual de conhecimento. 
-- Swagger no contexto do Django Rest Framework.
+- opções do campo on_delete em models django.
 
 
 
