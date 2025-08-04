@@ -1,4 +1,6 @@
-
+- Validators em models.
+    - Validators do Django;
+    - Validators customizados.
 
 
 
