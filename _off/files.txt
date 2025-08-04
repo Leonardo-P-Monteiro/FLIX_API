@@ -1,6 +1,7 @@
-- Validators em models.
-    - Validators do Django;
-    - Validators customizados.
+- arquivo urls.py:
+    - Variável app_label;
+    - Função include();
+    - Padrão 'api/v1/';
 
 
 
