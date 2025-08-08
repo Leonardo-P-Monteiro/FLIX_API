@@ -1,8 +1,8 @@
-- arquivo urls.py:
-    - Variável app_label;
-    - Função include();
-    - Padrão 'api/v1/';
-
+- SerializerMethodField em ModelSerializer do DRF:
+    - Como definir um SerializerMethodField;
+        - padrões a seguir;
+            - get_fieldname;
+    
 
 
 ########################################################################
