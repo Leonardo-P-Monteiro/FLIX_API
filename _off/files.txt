@@ -1,7 +1,7 @@
-- SerializerMethodField em ModelSerializer do DRF:
-    - Como definir um SerializerMethodField;
-        - padrões a seguir;
-            - get_fieldname;
+- Autenticação JWT: Implementando com Lib DRF SimpleJWT;
+    - Introdução sobre Lib DRF SimpleJWT;
+    - Configuranções;
+    - 
     
 
 
