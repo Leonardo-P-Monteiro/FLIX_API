@@ -1,10 +1,6 @@
-- Autenticação JWT, DRF e DRF SimpleJWT: (OBS.: Ainda não fizemos manual desse 
-assunto listado abaixo, assista mais uma aula pra ver se o conteúdo se 
-complementa pois está muito curto pra gerar um manual.)
+- Autenticação JWT, DRF e DRF SimpleJWT:
+    - Rotas para obter, verificar e resetar tokens.
 
-    - propriedade permission_classes de generics classes em DRF;
-    - Classes de permissões do DRF como por exemplo a IsAuthentication;
-    - 
     
 
 
