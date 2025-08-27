@@ -1,7 +1,8 @@
-- Autenticação JWT, DRF e DRF SimpleJWT:
-    - Rotas para obter, verificar e resetar tokens.
+- Sobre autenticação JWT, DRF e DRF SimpleJWT:
+    - Papel do método request.user.has_perm() na implementação de permissões na API.
+    - Gerenciamento de permissões da API: request.user.has_perm()
 
-    
+
 
 
 ########################################################################
