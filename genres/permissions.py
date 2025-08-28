@@ -20,4 +20,3 @@ Att. Moderator 😊"
             return request.user.has_perm('genres.delete_genre')
 
         return False
-    
