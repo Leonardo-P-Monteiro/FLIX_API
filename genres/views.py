@@ -9,17 +9,17 @@ from genres.serializers import GenreSerializer
 from rest_framework import generics
 from rest_framework.permissions import IsAuthenticated
 # MY IMPORTS
-from .permissions import GenrePermissionClass
+from app.permissions import GlobalDefaultPermissions
 
 # Create your views here.
 
 class GenreCreateListView(generics.ListCreateAPIView):
-    permission_classes = (IsAuthenticated, GenrePermissionClass)
+    permission_classes = (IsAuthenticated, GlobalDefaultPermissions)
     queryset = Genre.objects.all()
     serializer_class = GenreSerializer
 
 class GenreRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
-    permission_classes = (IsAuthenticated, GenrePermissionClass)
+    permission_classes = (IsAuthenticated, GlobalDefaultPermissions)
     queryset = Genre.objects.all()
     serializer_class = GenreSerializer
 
