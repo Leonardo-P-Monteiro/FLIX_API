@@ -3,7 +3,7 @@ from rest_framework import permissions
 class GenrePermissionClass(permissions.BasePermission):
 
     message = "You don't have permission to make this action. \
-Att. Moderator 😊"
+Att. Moderator"
 
     def has_permission(self, request, view):
         

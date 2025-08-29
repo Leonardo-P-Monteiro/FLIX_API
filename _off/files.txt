@@ -1,9 +1,10 @@
 - Sobre autenticação JWT, DRF e DRF SimpleJWT:
-    - Papel do método request.user.has_perm() na implementação de permissões na API.
-    - Gerenciamento de permissões da API: request.user.has_perm() <<<<<< A FAZER MANUAL
 
 
 
+
+- como criar as permissões no banco de dados, usando os modelos Group e Permission do Django? <<<< Vale apena entender melhor, peça novamente pra lhe esplicar e depois gere um manual.
+- Atributo "_meta" de models.
 
 ########################################################################
         PADRÃO **SEM** EXEMPLO COMPLETO
