@@ -1,10 +1,8 @@
 - Sobre autenticação JWT, DRF e DRF SimpleJWT:
+    - Monta um manual de trabalhando com APIviews.
 
 
 
-
-- como criar as permissões no banco de dados, usando os modelos Group e Permission do Django? <<<< Vale apena entender melhor, peça novamente pra lhe esplicar e depois gere um manual.
-- Atributo "_meta" de models.
 
 ########################################################################
         PADRÃO **SEM** EXEMPLO COMPLETO
