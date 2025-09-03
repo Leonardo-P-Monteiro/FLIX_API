@@ -32,3 +32,11 @@ ser inferior a 1990.')
 superior a 200 caracteres.')
         
         return value
+
+class MovieStatsSerializer(serializers.Serializer):
+
+    # FIELDS OF MY SERIALIZER
+    total_movies = serializers.IntegerField()
+    movies_by_genre = serializers.ListField()
+    total_reviews = serializers.IntegerField()
+    average_stars = serializers.DecimalField(decimal_places=2, max_digits=5)
