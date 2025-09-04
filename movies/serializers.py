@@ -33,6 +33,12 @@ superior a 200 caracteres.')
         
         return value
 
+class MovieListSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Movie
+        fields = '__all__'
+
 class MovieStatsSerializer(serializers.Serializer):
 
     # FIELDS OF MY SERIALIZER
