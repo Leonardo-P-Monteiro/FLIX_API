@@ -1,6 +1,5 @@
 - Sobre autenticação JWT, DRF e DRF SimpleJWT:
-    - APIGeteway
-    - Métodos que podem ser sobrescritos para implementação de lógica nas GenericsViews do DRF
+    
 
 
 
