@@ -1,5 +1,0 @@
-
-
-
-vari = ' '
-print(vari.isspace())
