@@ -1,5 +1,5 @@
-- Sobre autenticação JWT, DRF e DRF SimpleJWT:
-    
+- Django Command
+
 
 
 
