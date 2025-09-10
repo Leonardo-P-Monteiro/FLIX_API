@@ -25,8 +25,12 @@ class Command(BaseCommand):
                 birthday = datetime.strptime(row['birthday'], '%Y-%m-%d').date()
                 nationality = row['nationality']
 
+                self.stdout.write(self.style.NOTICE(f'Creating: {name}'))
+
                 Actor.objects.create(
                     name = name,
                     birthday = birthday,
                     nationality = nationality,
                 )
+        
+        self.stdout.write(self.style.SUCCESS('Command performed with success!'))
